@@ -1,0 +1,721 @@
+.profile-box {
+  width: 100%;
+  height: 100%;
+  .tab-wraper {
+    width: 100%;
+    height: 100%;
+    .el-tab-pane {
+      height: 100%;
+    }
+    .fieldset-box {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .basic-info{
+        border:1px dashed #d8d8d8;
+        margin: 10px 5px 10px 5px;
+      }
+      .password {
+        border:1px dashed #d8d8d8;
+        margin: 10px 5px 10px 5px;
+      }
+      .legend {
+        color:#828282;
+        border:0px;
+        background-color:white;
+        display: block;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      label {
+        font-family: Arial, Vendera, Tahoma;
+        color: #999999;
+        width: 100px;
+        text-align: right;
+      }
+      .el-input {
+        width: 200px;
+        height: 40px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        border: 0;
+      }
+      .saveChange {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height:50px;
+        background: white;
+        padding-right: 10px;
+        .exitbtn {
+          float: right;
+        }
+      }
+    }
+
+    //代理设置
+    .agency-container {
+      width: 100%;
+      height: 100%;
+      background: white;
+      .agency-header {
+        width: 100%;
+        height: 30px;
+        span {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 14px;
+          color: black;
+        }
+        .agency-b {
+          display: inline-block;
+          margin-left: 10px;
+          font-weight: 100;
+          font-size: 10px;
+          color: black;
+        }
+        .el-radio {
+          line-height: 30px;
+          margin-left: 10px;
+        }
+      }
+      .agency-middle {
+        width: 100%;
+        height: 50px;
+        //overflow: hidden;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .agency-left {
+          //height: 50px;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+        }
+        .agency-right {
+          padding-right: 10px;
+          height: 100%;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          .flow-name {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .agency-box {
+        width: 100%;
+        height: calc(100% - 80px);
+        .scrollbar {
+          height: calc(100% - 40px); 
+          width:100%;
+          overflow-x: hidden;
+          i {
+            cursor: pointer;
+          }
+          .edit {
+            margin-right: 10px;
+          }
+          
+        }
+        .page {
+          display: -webkit-flex;
+          display: flex;
+          justify-content: center;
+        }
+        .el-scrollbar__wrap {
+          overflow-x: hidden;
+        }
+      }
+      
+    }
+
+    .personSetSkin {
+      position: relative;
+    }
+    .focusImg img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .addImg {
+      margin-left: 50px;
+      border: 1px solid #cccccc;
+      padding: 5px;
+    }
+    .skinLabel span {
+      display: block;
+      text-align: center;
+      margin-left: 50px;
+      margin-top: 5px;
+    }
+    .skinkung {
+      width: 100%;
+    }
+    .skinright {
+      float: right;
+      margin-top: 200px;
+    }
+
+    //通讯录
+    .address-book {
+      width:100%;
+      height: 100%;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+    }
+    .dendrogram {
+      width: 166px;
+      height: 100%;
+      border-right: 1px solid #ccc;
+      .left {
+        height:30px;
+        line-height:30px;
+        color:#7b8d9d;
+        padding-left: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom:1px solid #f0f0f0;
+        a {
+          color:black;
+        }
+      }
+      .doNewGroup {
+        height:30px;
+        line-height:30px;
+        padding-left: 10px;
+        .span {
+          font-size:14px;
+          color:#7a8d9d;
+        }
+      }
+      .group-list {
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        padding:0 10px;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        color: #000;
+        align-items: center;
+        .group-left {
+          font-size: 12px;
+          width: 100px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .group-right {
+          width: 40px;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .content-width  {
+          width: 100%;
+          height: 50px;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .agency-left {
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+          }
+          .agency-right {
+            padding-right: 10px;
+            height: 100%;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            .flow-name {
+              margin-left: 10px;
+              margin-right: 10px;
+            }
+          }
+      }
+
+      .content-keep {
+        width: 100%;
+        height: calc(100% - 90px);
+        .scrollbar {
+          height: 100%; 
+          // width: calc(100% - 170px);
+          width: 100%;
+          overflow-x: hidden;
+        }
+        .el-scrollbar__wrap {
+          overflow-x: hidden;
+        }
+      }
+
+      .page {
+        height: 40px;
+        width: 100%;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .saveChange {
+      width: 100%;
+      overflow: hidden;
+    }
+ 
+  }
+
+  .new-flow-dialog {
+    .dialog-box {
+      width: 100%;
+      height: 400px;
+      .comm {
+        width: calc(100% - 145px);
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        .btn {
+          margin-left: 10px;
+        }
+      }
+      .el-form-item {
+        margin-bottom: 10px; 
+      }
+      .flow-list {
+        width:100%;
+        height: 100%;
+        .scrollbar {
+          height: 100%; 
+          width:100%;
+          overflow-x: hidden;
+          
+        }
+        .el-scrollbar__wrap {
+          overflow-x: hidden;
+        }
+
+      }
+    }
+  }
+
+  .comm-dialog {
+    .search-input{
+      width: 100%;
+      position: relative;
+      .input {
+        position: absolute;
+        right:10px;
+        width: 200px;
+        height: 40px;
+        z-index: 300;
+      }
+       
+    }
+    //按角色
+    .role {
+      width:100%;
+      min-height:360px;
+      display: -webkit-flex; 
+      display: flex; 
+      flex-direction: row;
+      .role-left {
+        width:28%;
+        height:360px;
+        border:1px solid #ccc;
+        margin-right:15px;
+        .scrollbar {
+          height: 100%; 
+          width: 100%;
+          overflow-x: hidden;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: column;
+          .top-title {
+            width: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+            height:40px;
+            line-height: 40px;
+            padding-left:10px;
+            background: #fafafa;
+            border-bottom: 1px solid #d2d2d2;
+          }
+          ul {
+            display: -webkit-box;
+            display: flex;
+            flex-direction: column;
+            &>li{
+              height:40px;
+              line-height: 35px;
+              padding-left:10px;
+              border-bottom: 1px solid #d2d2d2;
+              cursor: pointer;
+              .icon-img {
+                width:8px; 
+                height:10px; 
+                margin-right:5px;
+              }
+            }
+          }
+
+
+        }
+        .el-scrollbar__wrap {
+          overflow-x: hidden;
+        }
+        
+      }
+    }
+
+    //按部门和通讯录
+    .contact {
+      width:100%;
+      min-height:360px;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .left {
+        width:30%;
+        margin-right:15px;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        .top-title {
+          height:40px;
+          line-height: 40px;
+          padding-left:10px;
+          background: #fafafa;
+          border-bottom: 1px solid #d2d2d2;
+          
+        }
+        .dept-tree {
+          padding-top:10px;
+          height:318px;
+          padding-left:10px;
+          overflow: auto;
+        }
+        .all-contact {
+          height:40px;
+          line-height: 40px;
+          padding-left:10px;
+          background: #fafafa;
+          border-bottom: 1px solid #d2d2d2;
+          cursor: pointer;
+          .icon-img {
+            width:8px; 
+            height:10px; 
+            margin-right:5px;
+          }
+        }
+      }
+    }
+    
+    //查询
+    .search {
+      width:100%;
+      min-height:360px;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      .left {
+        width:56%;
+        margin-right:15px;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        .top-title {
+          display: inline-block;
+          height:40px;
+          padding:10px;
+          box-sizing: border-box;
+          background: #fafafa;
+          border-bottom: 1px solid #d2d2d2;
+          display: -webkit-box;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          // .myClass input.el-input__inner {
+          //   border:0px;
+          //   outline:none;
+          //   cursor: pointer;
+          // }
+        }
+        .user-list {
+          width:100%;
+          height:276px;
+          overflow: auto;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          padding-left: 10px;
+          box-sizing: border-box;
+        }
+      }
+      .selected-role {
+        border:1px solid red;
+        width:28%;
+        border:1px solid #ccc;
+        min-height:360px;
+        overflow: auto;
+        margin-left: 15px;
+        .add-all-data {
+          padding-left:10px;
+          padding-right: 10px;
+          box-sizing: border-box;
+          display: -webkit-box;
+          display: flex;
+          height:40px;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #d2d2d2;
+        }
+        .tag-lists {
+          box-sizing: border-box;
+          width:100%;
+          display: -webkit-box;
+          display: flex;
+          flex-wrap: wrap;
+          .tag {
+            margin-left: 10px;
+            margin-top: 10px;
+          }
+        }
+      }
+
+    }
+
+    //共同样式
+    .user-common {
+      .role-page {
+        width:32%;
+        border:1px solid #ccc;
+        height:360px;
+        overflow: auto;
+       
+        .user-list {
+          width:100%;
+          height:calc(100% - 40px);
+          overflow: auto;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          // padding-left: 10px;
+          box-sizing: border-box;
+          .add-all-data {
+            display: -webkit-box;
+            display: flex;
+            justify-content: center;
+            height:40px;
+            align-items: center;
+            border-bottom: 1px solid #d2d2d2;
+          }
+          .current-role {
+            line-height: 40px;
+            height:40px;
+            padding-left: 10px;
+            background: #fafafa;
+            border-bottom: 1px solid #d2d2d2;
+          }
+          .list-box {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+        }
+        .btn {
+          display: -webkit-box;
+          display: flex;
+          justify-content: center;
+          height:40px;
+          align-items: center;
+          .el-pagination {
+            white-space: nowrap;
+            padding: 0;
+            color: #303133;
+            font-weight: 700;
+          }
+          .el-pagination button, .el-pagination span:not([class*=suffix]) {
+            display: inline-block;
+            font-size: 12px;
+            min-width: 30.5px;
+            height: 28px;
+            line-height: 28px;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+        }
+      }
+      .selected-role {
+        border:1px solid red;
+        width:30%;
+        border:1px solid #ccc;
+        height:359px;
+        overflow: auto;
+        margin-left: 15px;
+        .add-all-data {
+          padding-left:10px;
+          padding-right: 10px;
+          box-sizing: border-box;
+          display: -webkit-box;
+          display: flex;
+          height:40px;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #d2d2d2;
+        }
+        .tag-lists {
+          box-sizing: border-box;
+          width:100%;
+          display: -webkit-box;
+          display: flex;
+          flex-wrap: wrap;
+          .tag {
+            margin-left: 10px;
+            margin-top: 10px;
+          }
+        }
+      }
+
+    }
+
+    .btn-box {
+      display: -webkit-flex;
+      display: flex;
+      justify-content: flex-end;
+      margin-top:20px;
+    }
+
+    //子流程-并行流程
+    .list-wrap {
+      width: 100%;
+      overflow: auto;
+      .list {
+        width:100%;
+        min-height:36px;
+        
+        color: black;
+        .flow {
+          background: #fafafa;
+          cursor: pointer;
+          height: 36px;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #efeff4;
+          .name {
+            margin-left: 10px;
+          }
+          .flow-right {
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .add-icon {
+              width:24px;
+              height:24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 10px;
+              color: red;
+              cursor: pointer;
+              font-size: 16px;
+            }
+          }
+            
+        }
+        .active {
+          background: #8fe1e7;
+          color: black;
+        }
+        .users {
+          width: 95%;
+          height:36px;
+          margin-left:5%;
+          box-sizing: border-box;
+          border-bottom:1px solid #efeff4;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .user-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            // .photo {
+            //   width:32px;
+            //   height: 32px; 
+            //   border-radius: 50%;
+            //   overflow: hidden;
+            //   img {
+            //     width:32px;
+            //     height: 32px; 
+            //   }
+            // }
+            .user-name {
+              font-size: 14px;
+              margin-left: 10px;
+            }
+          }
+          .del-icon {
+            margin-right:10px;
+            color:#888888;
+          }
+        }
+      }
+      .view-nodata {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        font-size: 14px;
+        color: #666666;
+        .view-nodata-img,
+        .view-nodata-text {
+          display: flex;
+          justify-content: center;
+          i {
+            color: #d9d9d9;
+          }
+        }
+      }
+    }
+  }
+
+  .address-book-dialog {
+    .body-box {
+      width: 100%;
+      height:50px;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .input {
+        margin-left: 10px;
+        width: 250px;
+      }
+    }
+  }
+
+}

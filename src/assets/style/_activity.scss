@@ -1,0 +1,28 @@
+.act-btns {
+  text-align: left; 
+  padding-left: 18px;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 55px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 97%;
+    top:54px;
+    height: 1px;
+    background: #ddd;
+
+  }
+  .btn-type {
+    margin-right: 5px;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color:white;
+  }
+}

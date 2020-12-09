@@ -1,0 +1,619 @@
+
+.myapps-iframe {
+  height: 100%;
+  .main-link-content {
+    width:100%;
+    height:100%;
+    overflow: auto;
+  }
+  //图表
+  .main-chart {
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  //报表
+  .main-report {
+    width:100%;
+    height:100%;
+    background:#eee;
+    .nav-btn {
+      width: 100%;
+      height: 58px;
+      background: white;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      span {
+        cursor: pointer;
+        display: inline-block;
+        padding: 7px 18px;
+        background: #5bc0de;
+        color: white;
+        margin-left: 10px;
+        border-radius: 5px;
+      }
+      .btn-last {
+        background: white;
+        border: 1px solid #ccc;
+        color: black;
+        padding: 6px 18px;
+      }
+    }
+    .report-content {
+      width:100%;
+      height:calc(100% - 58px);
+      background:#eee;
+      overflow:auto;
+    }
+  }
+
+  //视图
+  .delegate {
+    position: relative;
+    width:100%;
+    height:100%;
+    //分割线
+    .el-divider--horizontal {
+      display: block;
+      height: 1px;
+      width: 100%;
+      margin: 0 0;
+    }
+    //树形视图
+    .dept-tree-wraper {
+      width:100%;
+      height: 100%;
+      .is-view {
+        width:100%;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        .view-tree {
+          padding:10px 0 0 40px;
+          box-sizing: border-box;
+          width:60%;
+          min-height:300px;
+        }
+        .multiple {
+          width: 40%;
+          border-left: 1px solid #ccc;
+          .header {
+            height: 40px;
+            width:100%;
+            padding: 0 20px 0 15px;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            color:black;
+            .text {
+              span:nth-child(2) {
+                margin-left: 8px;
+                font-size: 12px;
+                padding: 0 11px;
+                display: inline-block;
+                box-sizing: border-box;
+                border-radius: 10px;
+                background-color: #ff6161;
+                color: white;
+              }
+            }
+            
+
+          }
+          .content {
+            width:100%;
+            padding: 10px 10px 0 10px;
+            .tag {
+              margin-bottom: 5px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .no-view {
+        width:100%;
+        height: 100%;
+        display: -webkit-box;
+        display: flex;
+        flex-direction: row;
+        .treepanel {
+          width: 17%;
+          overflow-y: auto;
+          border-right: 1px solid #ccc;
+          .btns {
+            width:100%;
+            height:50px;
+            line-height: 50px;
+            
+            border-bottom: 1px solid #ccc;
+            .btn-icon {
+              font-size: 30px;
+              margin-right: 15px;
+              color:#909595;
+              cursor: pointer;
+            }
+          }
+          .tree {
+            padding-top: 15px;
+            box-sizing: border-box;
+            height: calc(100% - 50px);
+            .el-tree-node {
+              .is-leaf + .el-checkbox .el-checkbox__inner{
+                display: block;
+              }
+              .el-checkbox .el-checkbox__inner{
+                display: none;
+              }
+            }
+            .tree_menu{
+              position: fixed;
+              display: block;
+              z-index: 20000;
+              background-color: #fff;
+              padding:5px 0;
+              border: 1px solid #ebeef5;
+              border-radius: 4px;
+              box-shadow:0 2px 12px 0 rgba(0,0,0,.1);
+             
+              ul{
+                margin:0;
+                padding:0;
+              }
+              ul li{
+                list-style: none;
+                margin:0;
+                padding:0 15px;
+                font-size: 14px;
+                line-height: 30px;
+                cursor: pointer;
+              }
+              ul li:hover{
+                background-color: #ebeef5
+              }
+            }
+          }
+
+        }
+        .view-form {
+          // border: 1px solid red;
+          width: 83%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          .view-box{
+            width: 100%;
+            height: 100%;
+            .box-container {
+              width: 100%;
+              height: 100%;
+              .view-listview {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bulk-submission {
+      width:100%;
+      height:200px;
+      border:1px solid #ccc;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      border-radius: 4px;
+      .text {
+        width:84px;
+        background: #f4f6f6;
+        color: black;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .textarea {
+        width:calc(100% - 84px);
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    }
+
+    /*
+      地图视图
+    */
+    .map-view {
+      height:100%;
+      overflow: hidden;
+      position:relative;
+    .btns {
+      width: 100%;
+      padding: 0 27px 10px 27px;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+    }
+    .map-con {
+      position:relative;
+      .isHidden {
+        display: none;
+      }
+      .btns{
+        padding:2px 7px;
+        font-size: 11px;
+      }
+      .view-map {
+        width:75px;
+        height:20px;
+        position:absolute;
+        left: 37px;
+        top: 20px;
+        z-index:5000;
+        display:-webkit-flex;
+        display: flex;
+        flex-direction: row;
+        background:white;
+        border:1px solid #8ea8e0;
+        border-radius: 4px;
+        overflow: hidden;
+        -webkit-box-shadow:2px 2px 4px #8ea8e0;  
+        -moz-box-shadow:2px 2px 4px #8ea8e0;  
+        box-shadow:2px 2px 4px #8ea8e0; 
+        span {
+          cursor:pointer;
+          display:block;
+          width:50%;
+          height:20px;
+          line-height: 20px;
+          text-align: center;
+          font-size:12px;
+        }
+      }
+      .map-color{
+        background:#8ea8e0;
+        color:white;
+        font-weight:bold;
+      }
+      .address-wrap {
+        width:100%;
+        &>div{
+          width:100%;
+          display:-webkit-flex;
+          display: flex;
+          flex-direction:row;
+          &>div{
+            height:40px;
+            line-height:40px;
+            vertical-align:middle;
+            white-space:nowrap;
+          }
+          &:first-child {
+            margin: 5px 0 10px 0;
+            font-weight: bold;
+          }
+        }
+        .info {
+          margin-bottom:30px;
+        }
+        .common {
+          margin-bottom: 15px;
+        }
+        .add-btn {
+          display: -webkit-flex;
+          display:flex;
+          justify-content: center;
+          &>span {
+            margin-right:30px;
+          }
+        }
+      }
+      .bm-view{
+        height: 560px;
+        .BMap_stdMpZoom{
+          top: -50px
+        }
+      }
+    }
+    .num {
+      width:100%;
+      height:40px;
+      text-align: center;
+      line-height: 40px;
+      // position: absolute;
+      // left: 0;
+      // bottom: 0;
+      z-index: 9999;
+    }
+    }
+
+    /*
+      Excel导入弹窗的样式
+    */
+    .custom-dialog {
+      width:100%;
+      height:250px;
+      .body-cen {
+        width:70%;
+        height: 100%;
+        margin: 0 auto;
+        .tmpl {
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          color: black;
+          span:first-child {
+            margin-left: 10px;
+            color: #369bf5;
+            cursor: pointer;
+          }
+        }
+        .upload {
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 20px;
+          .input {
+            width: 70%;
+          }
+          .select {
+            margin-left: 10px;
+            color: #369bf5;
+            cursor: pointer;
+          }
+        }
+        .import {
+          width:100%;
+          height:40px;
+          line-height: 40px;
+          margin-top: 20px;
+          .excel-btn {
+            padding: 7px 15px;
+            background-color: #369bf5;
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+
+          }
+        }
+      }
+    }
+
+    /*
+      view_listview组件样式
+    */
+    .view-listview {
+      width: 100%;
+      height: calc(100% - 57px);
+      .listview-container {
+        //padding-top: 20px;
+        padding:18px 18px 0 18px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .el-table th {
+          padding: 8px 0;
+          min-width: 0;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+          position: relative;
+          text-align: center;
+        }
+        .el-table td, .el-table th {
+          padding: 8px 0;
+          min-width: 0;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+          position: relative;
+          text-align: left;
+        }
+      }
+      .listview-box {
+        width:100%;
+        height: calc(100% - 40px);
+        overflow: hidden;
+        .scrollbar {
+          width: 100%;
+          height: 100%;
+          overflow-x: hidden;
+        }
+        
+        .el-scrollbar__wrap {
+          overflow-x: hidden;
+        }
+      }
+      .page {
+        width:100%;
+        height: 40px;
+        .page-con {
+          width: 100%;
+          height:100%;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    /*
+      view_gridview
+    */
+    .view-gridview {
+      width: 100%;
+      height: 100%;
+      .act-btn {
+        width: 100%;
+        height: 55px;
+        padding: 10px;
+      }
+      .listview-box {
+        width:100%;
+        height: calc(100% - 100px);
+        overflow: auto;
+      }
+      .page {
+        width:100%;
+        height: 40px;
+        .page-con {
+          width: 100%;
+          height:100%;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+
+    /*
+      日历视图
+    */
+    .calendar-view {
+      width: 100%;
+      height: calc(100% - 57px);
+      padding: 0 10px 10px 10px;
+      box-sizing: border-box;
+      .calendar-wrap {
+        width: 100%;
+        height: 100%;
+        .cal-type {
+          width: 100%;
+          height: 66px;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .date {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: #868696;
+            cursor: pointer;
+            span {
+              display: inline-block;
+              padding: 6px;
+              box-sizing: border-box;
+            }
+            span:nth-child(1) {
+              border-right: 1px solid #ccc;
+              padding-left:10px;
+              padding-right:11px;
+            }
+            span:nth-child(2) {
+              padding-left:10px;
+              padding-right:10px;
+            }
+            span:nth-child(3) {
+              border-left: 1px solid #ccc;
+              padding-right:10px;
+              padding-left:11px;
+            }
+          }
+          .view-type {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            span {
+              display: inline-block;
+              padding: 6px 30px;
+              box-sizing: border-box;
+            }
+            span:hover {
+              background-color: #46d2db;
+              color: white;
+            }
+            span:nth-child(1) {
+              border-right: 1px solid #ccc;
+            }
+            span:nth-child(3) {
+              border-left: 1px solid #ccc;
+            }
+            .date_active {
+              background-color: #46d2db;
+              color: white;
+            }
+          }
+        }
+        .cal-box {
+          width: 100%;
+          height: calc(100% - 66px);
+          .day-view {
+  
+          }
+          .week-view {
+            // .ul {
+            //   display: -webkit-flex;
+            //   display: flex;
+            //   flex-direction: row;
+            //   border: 1px solid red;
+            //   justify-content: space-between;
+            //   .li {
+            //     flex:1;
+            //     border: 1px solid pink;
+            //   }
+            // }
+            .try {
+              width: 100%;
+              display: -webkit-flex;
+              display: flex;
+              flex-direction: row;
+              border: 1px solid red;
+              .try-ul {
+                li {
+                  width: 100px;
+                  height:50px;
+                  border: 1px solid pink;
+                }
+              }
+              .try-ul-li {
+                width: 100%;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+                li {
+                  flex:1;
+                  height:100%;
+                  border: 1px solid pink;
+                  div {
+                    flex:1;
+                    height:50px;
+                    border: 1px solid skyblue;
+                  }
+                }
+              }
+            }
+
+  
+  
+          }
+          .mon-view {
+            
+          }
+        }
+
+      }
+    }
+    .show-view {
+      width: 100%;
+      height: 100%;
+      padding: 0 10px 10px 10px;
+      box-sizing: border-box;
+    }
+  }
+}
